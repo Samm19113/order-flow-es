@@ -1,0 +1,130 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Item selection -->
+        <AutoCompleteTextView
+            android:id="@+id/dialogAutoComplete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Artículo" />
+
+        <TextView
+            android:text="Tipo de carne"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- Meat type -->
+        <Spinner
+            android:id="@+id/dialogMeatSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Meat options -->
+        <TextView
+            android:text="Opciones de carne"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <CheckBox
+            android:id="@+id/dialogSoloCarne"
+            android:text="Solo Carne (+1€)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!--<CheckBox
+            android:id="@+id/dialogMixedMeat"
+            android:text="Mixto (+0.5€)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/> -->
+
+        <CheckBox
+            android:id="@+id/dialogExtraMeat"
+            android:text="Extra Carne (+1€)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- Remove sauces -->
+        <TextView
+            android:text="Salsas"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <CheckBox
+            android:id="@+id/dialogsinSalsas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sin Salsas" />
+
+        <CheckBox
+            android:id="@+id/dialogConPicante"
+            android:text="Con Picante"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <CheckBox
+            android:id="@+id/dialogSinSalsaRoja"
+            android:text="Sin Salsa Roja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <CheckBox
+            android:id="@+id/dialogSinSalsaBlanca"
+            android:text="Sin Salsa Blanca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- Remove vegetables -->
+        <TextView
+            android:text="Eliminar verduras"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <CheckBox
+            android:id="@+id/dialogSinLechuga"
+            android:text="Sin Lechuga (+1€)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <CheckBox
+            android:id="@+id/dialogSinCebolla"
+            android:text="Sin Cebolla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <CheckBox
+            android:id="@+id/dialogSinTomate"
+            android:text="Sin Tomate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- Cheese -->
+        <TextView
+            android:text="Con queso"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <CheckBox
+            android:id="@+id/dialogExtraCheese"
+            android:text="Queso (+1€)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</ScrollView>

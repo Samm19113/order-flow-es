@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="¿Qué querías?"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteItem"
+            android:hint="Buscar producto..."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Spinner
+            android:id="@+id/qtySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:text="Tipo de carne"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Spinner
+            android:id="@+id/meatSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="Opciones de carne"
+            android:layout_marginTop="12dp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <CheckBox
+            android:id="@+id/soloCarne"
+            android:text="Solo Carne (+1€)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!--<CheckBox
+            android:id="@+id/mixedMeat"
+            android:text="Mixto (+0.5€)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>-->
+
+        <CheckBox
+            android:id="@+id/extraMeat"
+            android:text="Extra Carne (+1€)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="Salsas"
+            android:layout_marginTop="12dp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <CheckBox
+            android:id="@+id/sinSalsas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sin Salsas" />
+
+
+        <CheckBox
+            android:id="@+id/conPicante"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Con Picante" />
+
+        <CheckBox
+            android:id="@+id/sinSalsaRoja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sin Salsa Roja" />
+
+        <CheckBox
+            android:id="@+id/sinSalsaBlanca"
+            android:text="Sin Salsa Blanca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="Eliminar verduras"
+            android:layout_marginTop="12dp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <CheckBox
+            android:id="@+id/sinLechuga"
+            android:text="Sin Lechuga (+1€)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <CheckBox
+            android:id="@+id/sinCebolla"
+            android:text="Sin Cebolla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <CheckBox
+            android:id="@+id/sinTomate"
+            android:text="Sin Tomate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="Con queso"
+            android:layout_marginTop="12dp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <CheckBox
+            android:id="@+id/extraCheese"
+            android:text="Queso (+1€)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <!--
+        <TextView
+            android:text="Bebida"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        -->
+        <!--
+        <Spinner
+            android:id="@+id/drinkSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        -->
+
+
+        <EditText
+            android:id="@+id/itemNoteInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nota del artículo" />
+
+
+
+        <Button
+            android:id="@+id/addButton"
+            android:text="Añadir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/posOrangeLight"
+            android:textColor="@color/white"/>
+
+        <LinearLayout
+            android:id="@+id/orderList"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="Dirección"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <AutoCompleteTextView
+            android:id="@+id/addressInput"
+            android:hint="Address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:text="Número"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/phoneInput"
+            android:hint="Customer phone"
+            android:inputType="phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="Notas"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/notesInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Notas (opcional)"
+            android:inputType="textMultiLine"
+            android:minLines="2"
+            android:maxLines="4"/>
+
+
+        <RadioGroup
+            android:id="@+id/paymentGroup"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/payCash"
+                android:text="Efectivo"
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <RadioButton
+                android:id="@+id/payCard"
+                android:text="Tarjeta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/finalizeButton"
+            android:text="Completar Pedido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/posOrangeLight"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/viewOrdersButton"
+            android:text="Historial de Pedidos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/posOrangeLight"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/totalText"
+            android:text="Total: €0"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</ScrollView>
