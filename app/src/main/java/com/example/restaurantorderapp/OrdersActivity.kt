@@ -131,6 +131,7 @@ class OrdersActivity : AppCompatActivity() {
 📍 ${order.address}
 📞 ${order.phone}
 💳 ${order.paymentMethod}
+
 ${if (order.notes.isNotEmpty()) "📝 ${order.notes}" else ""}
 💶 €${order.total}
 🕒 ${SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.getDefault()).format(Date(order.timestamp))}
@@ -195,6 +196,32 @@ ${
                         }
                     }
 
+                    val paymentBtn = Button(this@OrdersActivity).apply {
+                        text = "Pago"
+
+                        setOnClickListener {
+
+                            val methods = arrayOf(
+                                "Efectivo",
+                                "Tarjeta"
+                            )
+
+                            AlertDialog.Builder(this@OrdersActivity)
+                                .setTitle("Cambiar método de pago")
+                                .setItems(methods) { _, which ->
+
+                                    val updatedOrder = order.copy(
+                                        paymentMethod = methods[which]
+                                    )
+
+                                    lifecycleScope.launch {
+                                        db.orderDao().update(updatedOrder)
+                                        loadOrders()
+                                    }
+                                }
+                                .show()
+                        }
+                    }
 
 
 
@@ -202,6 +229,8 @@ ${
                     buttons.addView(deleteBtn)
                     buttons.addView(printBtn)
                     buttons.addView(editBtn)
+                    buttons.addView(paymentBtn)
+
 
                     layout.addView(orderText)
                     layout.addView(buttons)
